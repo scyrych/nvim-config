@@ -9,6 +9,19 @@ local plugins = {
     },
   },
   {
+    "williamboman/mason-lspconfig.nvim",
+    build = ":MasonUpdate",
+    opts = {
+      ensure_installed = {
+        "cssls",
+        "eslint",
+        "graphql",
+        "html",
+        "jsonls",
+      }
+    }
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function ()
       require "plugins.configs.lspconfig"
@@ -51,6 +64,7 @@ local plugins = {
         "typescript",
         "tsx",
         "json",
+        "graphql",
 
        -- low level
         "c",
