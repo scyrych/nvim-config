@@ -2,17 +2,15 @@ local plugins = {
   {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
-        "rust_analyzer",
-        "cssls",
-        "eslint",
-        "graphql",
-        "html",
-        "jsonls",
+        "lua-language-server",
+        "rust-analyzer",
+        "css-lsp",
+        "eslint-lsp",
+        "graphql-language-service-cli",
+        "html-lsp",
+        "json-lsp",
       }
     }
   },
