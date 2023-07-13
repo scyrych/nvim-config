@@ -11,6 +11,7 @@ local plugins = {
         "graphql-language-service-cli",
         "html-lsp",
         "json-lsp",
+        "typescript-language-server"
       }
     }
   },

@@ -9,7 +9,7 @@ lspconfig.eslint.setup({
 })
 
 
-local servers = { "html", "cssls", "graphql", "jsonls"}
+local servers = { "html", "cssls", "graphql", "jsonls", "tsserver" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
