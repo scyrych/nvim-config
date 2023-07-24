@@ -1,5 +1,28 @@
 local plugins = {
   {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        -- defaults 
+        "vim",
+        "lua",
+
+        -- web dev 
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "graphql",
+
+       -- low level
+        "c",
+        "rust",
+      },
+    },
+  },
+  {
     "williamboman/mason.nvim",
     build = ":MasonUpdate",
     opts = {
@@ -42,29 +65,10 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-dap",
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        -- defaults 
-        "vim",
-        "lua",
-
-        -- web dev 
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "json",
-        "graphql",
-
-       -- low level
-        "c",
-        "rust",
-      },
-    },
+    dependencies = {
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+		},
   },
 }
 return plugins
