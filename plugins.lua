@@ -64,6 +64,14 @@ local plugins = {
     end
   },
   {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({})
+    end
+  },
+  {
     "mfussenegger/nvim-dap",
     dependencies = {
 			"theHamsta/nvim-dap-virtual-text",
